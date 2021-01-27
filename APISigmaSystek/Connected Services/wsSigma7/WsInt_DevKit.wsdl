@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DEVKIT_CreacionCasos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParStrSolicitudes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_CreacionCasosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVKIT_CreacionCasosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_InsUdpParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParStrSolicitudes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_InsUdpParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVKIT_InsUdpParametrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_MoverFlujo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParStrSolicitudes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_MoverFlujoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVKIT_MoverFlujoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_ConsultaCasos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParStrCaso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_ConsultaCasosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVKIT_ConsultaCasosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_ConsultaCasosDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParStrCaso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DEVKIT_ConsultaCasosDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DEVKIT_ConsultaCasosDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DEVKIT_CreacionCasosSoapIn">
+    <wsdl:part name="parameters" element="tns:DEVKIT_CreacionCasos" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_CreacionCasosSoapOut">
+    <wsdl:part name="parameters" element="tns:DEVKIT_CreacionCasosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_InsUdpParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:DEVKIT_InsUdpParametros" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_InsUdpParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:DEVKIT_InsUdpParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_MoverFlujoSoapIn">
+    <wsdl:part name="parameters" element="tns:DEVKIT_MoverFlujo" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_MoverFlujoSoapOut">
+    <wsdl:part name="parameters" element="tns:DEVKIT_MoverFlujoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_ConsultaCasosSoapIn">
+    <wsdl:part name="parameters" element="tns:DEVKIT_ConsultaCasos" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_ConsultaCasosSoapOut">
+    <wsdl:part name="parameters" element="tns:DEVKIT_ConsultaCasosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_ConsultaCasosDetSoapIn">
+    <wsdl:part name="parameters" element="tns:DEVKIT_ConsultaCasosDet" />
+  </wsdl:message>
+  <wsdl:message name="DEVKIT_ConsultaCasosDetSoapOut">
+    <wsdl:part name="parameters" element="tns:DEVKIT_ConsultaCasosDetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WsInt_DevKitSoap">
+    <wsdl:operation name="DEVKIT_CreacionCasos">
+      <wsdl:input message="tns:DEVKIT_CreacionCasosSoapIn" />
+      <wsdl:output message="tns:DEVKIT_CreacionCasosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_InsUdpParametros">
+      <wsdl:input message="tns:DEVKIT_InsUdpParametrosSoapIn" />
+      <wsdl:output message="tns:DEVKIT_InsUdpParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_MoverFlujo">
+      <wsdl:input message="tns:DEVKIT_MoverFlujoSoapIn" />
+      <wsdl:output message="tns:DEVKIT_MoverFlujoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasos">
+      <wsdl:input message="tns:DEVKIT_ConsultaCasosSoapIn" />
+      <wsdl:output message="tns:DEVKIT_ConsultaCasosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasosDet">
+      <wsdl:input message="tns:DEVKIT_ConsultaCasosDetSoapIn" />
+      <wsdl:output message="tns:DEVKIT_ConsultaCasosDetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsInt_DevKitSoap" type="tns:WsInt_DevKitSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DEVKIT_CreacionCasos">
+      <soap:operation soapAction="http://tempuri.org/DEVKIT_CreacionCasos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_InsUdpParametros">
+      <soap:operation soapAction="http://tempuri.org/DEVKIT_InsUdpParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_MoverFlujo">
+      <soap:operation soapAction="http://tempuri.org/DEVKIT_MoverFlujo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasos">
+      <soap:operation soapAction="http://tempuri.org/DEVKIT_ConsultaCasos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasosDet">
+      <soap:operation soapAction="http://tempuri.org/DEVKIT_ConsultaCasosDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsInt_DevKitSoap12" type="tns:WsInt_DevKitSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DEVKIT_CreacionCasos">
+      <soap12:operation soapAction="http://tempuri.org/DEVKIT_CreacionCasos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_InsUdpParametros">
+      <soap12:operation soapAction="http://tempuri.org/DEVKIT_InsUdpParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_MoverFlujo">
+      <soap12:operation soapAction="http://tempuri.org/DEVKIT_MoverFlujo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasos">
+      <soap12:operation soapAction="http://tempuri.org/DEVKIT_ConsultaCasos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DEVKIT_ConsultaCasosDet">
+      <soap12:operation soapAction="http://tempuri.org/DEVKIT_ConsultaCasosDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsInt_DevKit">
+    <wsdl:port name="WsInt_DevKitSoap" binding="tns:WsInt_DevKitSoap">
+      <soap:address location="http://192.111.100.103:81/WsDeveloperKit/WsInt_DevKit.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsInt_DevKitSoap12" binding="tns:WsInt_DevKitSoap12">
+      <soap12:address location="http://192.111.100.103:81/WsDeveloperKit/WsInt_DevKit.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
