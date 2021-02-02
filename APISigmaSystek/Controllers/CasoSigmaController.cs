@@ -3,6 +3,7 @@ using AutoMapper;
 using System.Web.Http;
 using APISigmaSystek.Models;
 using static APISigmaSystek.Helpers.XmlHelpers;
+using static APISigmaSystek.Helpers.ExceptionHelper;
 using Newtonsoft.Json;
 using APISigmaSystek.wsSigma7;
 
@@ -72,7 +73,7 @@ namespace APISigmaSystek.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return InternalServerError(GetException(ex));
             }
         }
 
@@ -109,7 +110,7 @@ namespace APISigmaSystek.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return InternalServerError(GetException(ex));
             }
         }
 
