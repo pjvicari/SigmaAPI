@@ -103,7 +103,7 @@ namespace APISigmaSystek.Controllers
                     item.NumeroCaso = numeroCaso;
                     item.CodigoEstado = Convert.ToInt32(sigmaRespuesta.Solicitud.Caso.DatosGenerales.CodigoEstado);
                     item.Estado = sigmaRespuesta.Solicitud.Caso.DatosGenerales.Estado;
-                    return Ok(JsonConvert.SerializeObject(item));
+                    return Ok(JsonConvert.SerializeObject(item).Replace("\"", ""));
                 }
                 else
                     return BadRequest(sigmaRespuesta.Solicitud.ResultadoOperacion.ResultadoDescripcion);
