@@ -14,7 +14,7 @@ namespace APISigmaSystek.Helpers
             {
                 exc = exc.InnerException;
             }
-
+            //Prueba de cambio
             //if (exc.Message.Contains("EntityValidationErrors"))
             //{
             //    string errorValidacion = string.Empty;
